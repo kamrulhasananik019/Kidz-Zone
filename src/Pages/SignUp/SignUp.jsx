@@ -34,8 +34,9 @@ const SignUp = () => {
     return (
         <div>
 
-            <div className="text-center my-14">
+            <div className="text-center md:my-14">
                 <h1 className="text-2xl font-extrabold py-5">welcome</h1>
+                <p className="text-2xl font-semibold">To</p>
                 <h1 className="text-5xl font-semibold">
                     <span className='text-orange-400'>KIDS</span> <span className='text-lime-300'>ZONE</span>
                 </h1>
@@ -44,7 +45,7 @@ const SignUp = () => {
                 <div className="border-4 rounded-lg border-emerald-300">
                     <img src="https://i.ibb.co/Q6bDC62/Untitled-design-1.png" alt="" />
                 </div>
-                <div className="container w-2/3 border-4 border-emerald-300 rounded-lg p-10" >
+                <div className="container md:w-2/3 border-4 border-emerald-300 rounded-lg p-3 md:p-10" >
                     <h1 className="text-2xl text-center text-orange-400">Register Now!</h1>
                     <form onSubmit={handleSignup}>
                         <div className="mb-6">
