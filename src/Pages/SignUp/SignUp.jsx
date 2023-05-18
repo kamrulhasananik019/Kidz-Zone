@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
 const SignUp = () => {
@@ -38,7 +38,7 @@ const SignUp = () => {
                 <h1 className="text-2xl font-extrabold py-5">welcome</h1>
                 <p className="text-2xl font-semibold">To</p>
                 <h1 className="text-5xl font-semibold">
-                    <span className='text-orange-400'>KIDS</span> <span className='text-lime-300'>ZONE</span>
+                    <span className='text-red-600'>KIDS</span> <span className='text-lime-700'>ZONE</span>
                 </h1>
             </div>
             <div className="container mx-auto grid grid-cols-col md:grid-cols-2">
@@ -48,7 +48,7 @@ const SignUp = () => {
                 <div className="container md:w-2/3 border-4 border-emerald-300 rounded-lg p-3 md:p-10" >
                     <h1 className="text-2xl text-center text-orange-400">Register Now!</h1>
                     <form onSubmit={handleSignup}>
-                        <div className="mb-6">
+                        <div className="mb-6 ">
                             <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                 Name
                             </label>
@@ -116,11 +116,15 @@ const SignUp = () => {
                         </div>
                         <button
                             type="submit"
-                            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            className=" text-white bg-lime-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         >
                             Submit
                         </button>
                     </form>
+                    <div className="py-3">
+                        <hr />
+                    </div>
+                    <p className=" font-semibold">Already have an account ! <Link className="text-lime-800 underline" to="/login">Log In</Link></p>
                 </div>
             </div>
         </div>

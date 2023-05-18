@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Button } from "flowbite-react";
-import { useLocation, useNavigate } from "react-router-dom";
-
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
@@ -47,15 +47,15 @@ const Login = () => {
                 <h1 className="text-2xl font-extrabold py-5">welcome</h1>
                 <p className="text-2xl font-semibold">To</p>
                 <h1 className="text-5xl font-semibold">
-                    <span className='text-orange-400'>KIDS</span> <span className='text-lime-300'>ZONE</span>
+                    <span className='text-red-600'>KIDS</span> <span className='text-lime-300'>ZONE</span>
                 </h1>
             </div>
             <div className="container mx-auto grid grid-cols-col md:grid-cols-2">
                 <div className="border-4 rounded-lg border-emerald-300">
                     <img src="https://i.ibb.co/Q6bDC62/Untitled-design-1.png" alt="" />
                 </div>
-                <div className="container  md:w-2/3 border-4 border-emerald-300 rounded-lg md:p-2  py-10">
-                    <form onSubmit={handleLogin}>
+                <div className="container  p-10 md:w-2/3 border-4 border-emerald-300 rounded-lg">
+                    <form onSubmit={handleLogin} className="p-6">
                         <div className="mb-6">
                             <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                 Your email
@@ -97,17 +97,21 @@ const Login = () => {
                         </div>
                         <button
                             type="submit"
-                            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            className="text-white bg-lime-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         >
-                            Submit
+                            Log In
                         </button>
                     </form>
-                    <div>
+                    <p className="py-3  ps-8 font-semibold">Create an Account ! <Link className="text-lime-800 underline" to="/signup">Register</Link></p>
+                    <hr />
+                    <div className="py-2  ps-10">
                         <Button onClick={handleGoogleLogIn}
-                            color="gray"
-                            pill={true}
+                            outline={true}
+                            gradientDuoTone="greenToBlue"
+                            size='xl'
+                            className=" text-center"
                         >
-                            Gray
+                            <FcGoogle className="text-2xl"></FcGoogle>
                         </Button>
                     </div>
                 </div>

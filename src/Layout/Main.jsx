@@ -8,7 +8,7 @@ import Header from "../Pages/Shared/Header/Header";
 const Main = () => {
     return (
         <div>
-           <div className="container mx-auto"> <Header></Header></div>
+           <div className="container mx-auto shadow-sm"> <Header></Header></div>
             <Outlet></Outlet>
 
         </div>

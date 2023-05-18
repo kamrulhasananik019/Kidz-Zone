@@ -29,7 +29,7 @@ const Header = () => {
                     alt="Flowbite Logo"
                 />
                 <span className="self-center whitespace-nowrap lg:text-3xl font-bold dark:text-white">
-                    <span className='text-orange-400'>KIDS</span> <span className='text-lime-300'>ZONE</span>
+                    <span className='text-red-600'>KIDS</span> <span className=''>ZONE</span>
                 </span>
             </Navbar.Brand>
             <div className="flex md:order-2">
