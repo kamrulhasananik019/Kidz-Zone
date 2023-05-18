@@ -18,7 +18,7 @@ const Header = () => {
     }
 
     return (
-        <Navbar
+        <Navbar className="bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 rounded-xl "
             fluid={true}
             rounded={true}
         >
