@@ -6,7 +6,11 @@ export default {
   ],
   theme: {
     extend: {},
-  },
+    fontFamily:{
+      custom:["Podkova","sans-serif"]
+    }
+  }
+  ,
   plugins: [
     require('flowbite/plugin')
 ]

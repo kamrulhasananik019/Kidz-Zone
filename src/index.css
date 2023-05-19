@@ -1,7 +1,9 @@
+/* Font uRL */
+@import url('https://fonts.googleapis.com/css2?family=Podkova:wght@500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 
 

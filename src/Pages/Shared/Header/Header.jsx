@@ -18,13 +18,13 @@ const Header = () => {
     }
 
     return (
-        <Navbar className="bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 rounded-xl "
+        <Navbar className="bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 rounded-xl "
             fluid={true}
             rounded={true}
         >
             <Navbar.Brand href="https://flowbite.com/">
                 <img
-                    src="https://i.ibb.co/Q6bDC62/Untitled-design-1.png"
+                    src="https://i.ibb.co/ys4R6t8/Untitled-design-1-removebg-preview.png"
                     className="mr-3 h-10 lg:h-20 rounded-full"
                     alt="Flowbite Logo"
                 />
