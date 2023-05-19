@@ -7,7 +7,7 @@ const TabViwe = () => {
 
             <Tabs>
                 <TabList>
-                    <Tab><span className='text-2xl font-semibold text-stone-600'>TRUCK</span></Tab>
+                    <Tab><span className='text-2xl font-semibold text-[#5145CD]'>TRUCK</span></Tab>
                     <Tab>Title 2</Tab>
                 </TabList>
 

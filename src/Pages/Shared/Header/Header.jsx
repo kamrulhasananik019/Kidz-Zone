@@ -18,18 +18,18 @@ const Header = () => {
     }
 
     return (
-        <Navbar className="bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 rounded-xl "
+        <Navbar className="bg-[#C7D2FE] shadow-xl rounded-xl "
             fluid={true}
             rounded={true}
         >
-            <Navbar.Brand href="https://flowbite.com/">
+            <Navbar.Brand href="">
                 <img
-                    src="https://i.ibb.co/ys4R6t8/Untitled-design-1-removebg-preview.png"
+                    src="https://i.ibb.co/jwKds7N/SL-071221-44310-19-removebg-preview.png"
                     className="mr-3 h-10 lg:h-20 rounded-full"
                     alt="Flowbite Logo"
                 />
                 <span className="self-center whitespace-nowrap lg:text-3xl font-bold dark:text-white">
-                    <span className='text-red-600'>KIDS</span> <span className=''>ZONE</span>
+                    <span className='text-[#5145CD]'>KIDS</span> <span className=' bg-clip-text text-transparent bg-gradient-to-tr from-red-600 via-violet-500 to-sky-600'>Zone</span>
                 </span>
             </Navbar.Brand>
             <div className="flex md:order-2">
