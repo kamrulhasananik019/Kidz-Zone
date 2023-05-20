@@ -1,7 +1,7 @@
 import { AiOutlineWechat } from 'react-icons/ai';
 import { BsFillBoxSeamFill } from 'react-icons/bs';
 import { RiVisaFill } from 'react-icons/ri';
-import { FaShippingFast } from 'react-icons/Fa';
+import { FaShippingFast } from 'react-icons/fa';
 
 const Banner = () => {
     return (
@@ -26,7 +26,7 @@ const Banner = () => {
                             <p className="text-white">Immerse yourself in a captivating universe of toy.</p>
                         </div>
                         <div>
-                            <img src="https://i.ibb.co/RDQmJgw/batman-1367730-640-removebg-preview.png" alt="" />
+                            <img src="https://i.ibb.co/Dp6m0Bd/Untitled-design-2-removebg-preview.png" alt="" />
                         </div>
                     </div>
                     {/* 3rd div */}

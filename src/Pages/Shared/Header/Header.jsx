@@ -18,7 +18,7 @@ const Header = () => {
     }
 
     return (
-        <Navbar className="bg-[#C7D2FE] shadow-xl rounded-xl "
+        <Navbar className="header shadow-xl rounded-xl "
             fluid={true}
             rounded={true}
         >
