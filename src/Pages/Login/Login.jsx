@@ -49,10 +49,10 @@ const Login = () => {
                 </h1>
             </div>
             <div className="container mx-auto grid grid-cols-col md:grid-cols-2">
-                <div className="border-4 rounded-lg border-[#5145CD]">
+                <div className="border-4 rounded-lg border-[#95a8e6]">
                     <img src="https://i.ibb.co/jwKds7N/SL-071221-44310-19-removebg-preview.png" alt="" />
                 </div>
-                <div className="container  p-10 md:w-2/3 border-4 border-[#5145CD] rounded-lg">
+                <div className="container  p-10 md:w-2/3 border-4 border-[#95a8e6] rounded-lg">
                     <form onSubmit={handleLogin} className="p-6">
                         <div className="mb-6">
                             <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">

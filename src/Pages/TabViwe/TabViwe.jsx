@@ -1,21 +1,67 @@
+import { useEffect, useState, } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import TabViewCards from './TabViewCards';
 
 const TabViwe = () => {
-    return (
-        <div className='my-20' >
+    const [toys, setToys] = useState([]);
 
+
+    useEffect(() => {
+        fetch(`https://server-tan-eight.vercel.app/categories?category=Sedans`, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                setToys(data);
+            });
+    }, [])
+
+    const handleCategory = (event) => {
+        const category = event.target.innerText;
+
+        fetch(`https://server-tan-eight.vercel.app/categories?category=${category}`, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                setToys(data);
+            });
+    };
+
+
+    return (
+        <div className='my-20'>
             <Tabs>
-                <TabList>
-                    <Tab><span className='text-2xl font-semibold text-[#5145CD]'>TRUCK</span></Tab>
-                    <Tab>Title 2</Tab>
+                <TabList onClick={handleCategory}>
+                    <Tab ><span className='text-2xl font-semibold text-[#5145CD]'>Sedans</span></Tab>
+                    <Tab ><span className='text-2xl font-semibold text-[#5145CD]'>SUVs</span></Tab>
+                    <Tab><span className='text-2xl font-semibold text-[#5145CD]'>Trucks</span></Tab>
+
+
                 </TabList>
 
                 <TabPanel>
-                    <h2>Any content 1</h2>
+
+                    <div className='grid grid-cols-1 md:grid-cols-4'>
+                        {toys.map(truck => <TabViewCards truck={truck} key={truck._id}></TabViewCards>)}
+                    </div>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 2</h2>
+                    <div className='grid grid-cols-1 md:grid-cols-4'>
+                        {toys.map(truck => <TabViewCards truck={truck} key={truck._id}></TabViewCards>)}
+                    </div>
+                </TabPanel>
+                <TabPanel>
+                    <div className='grid grid-cols-1 md:grid-cols-4'>
+                        {toys.map(truck => <TabViewCards truck={truck} key={truck._id}></TabViewCards>)}
+                    </div>
                 </TabPanel>
             </Tabs>
         </div>
