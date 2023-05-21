@@ -1,9 +1,9 @@
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
-import {  Card } from "flowbite-react";
+import { Card } from "flowbite-react";
 import { Link } from "react-router-dom";
 
-const  TabViewCards= ({ truck }) => {
+const TabViewCards = ({ truck }) => {
     const {
         name,
         price,
@@ -15,7 +15,7 @@ const  TabViewCards= ({ truck }) => {
         <div>
             <Card
                 className="transform transition duration-500 hover:scale-110  bg-[#EEF2FF] h-full w-80 lg:w-full mx-auto"
-               imgSrc={picture}
+                imgSrc={picture}
             >
                 <h2 className="lg:text-2xl color3">{name}</h2>
                 <p className="lg:text-lg"><span className="color3">Price: </span>${price}</p>
