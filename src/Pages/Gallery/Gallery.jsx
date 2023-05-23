@@ -10,13 +10,13 @@ const Gallery = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="grid gap-4">
                     <div>
-                        <img  data-aos="zoom-in" className="h-full max-w-full rounded-lg" src="https://images.unsplash.com/photo-1550256662-c6adff40f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=680&q=80" alt="" />
+                        <img data-aos="flip-left" className="h-full max-w-full rounded-lg" src="https://images.unsplash.com/photo-1550256662-c6adff40f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=680&q=80" alt="" />
                     </div>
                     <div>
-                        <img data-aos="zoom-in" className="h-full max-w-full rounded-lg" src="https://cdn.pixabay.com/photo/2016/10/20/06/00/fiat-1754723_640.jpg" alt="" />
+                        <img data-aos="flip-left" className="h-full max-w-full rounded-lg" src="https://cdn.pixabay.com/photo/2016/10/20/06/00/fiat-1754723_640.jpg" alt="" />
                     </div>
                     <div>
-                        <img data-aos="zoom-in" className="h-auto max-w-full rounded-lg" src="https://images.unsplash.com/photo-1508112669284-33e37093fc34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="" />
+                        <img data-aos="flip-left"className="h-auto max-w-full rounded-lg" src="https://images.unsplash.com/photo-1508112669284-33e37093fc34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="" />
                     </div>
                 </div>
                 <div className="grid gap-4">
