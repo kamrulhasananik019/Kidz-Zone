@@ -40,7 +40,7 @@ const UpdateToys = () => {
                         Swal.fire(
                             'Update!',
                             'Your Toy has been Update.',
-                            'success'
+                            'successFull'
                         );
                     }
                 });
