@@ -2,6 +2,7 @@ import { data } from 'autoprefixer';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const UpdateToys = () => {
     const toy = useLoaderData();
@@ -15,22 +16,37 @@ const UpdateToys = () => {
         const quantity = form.quantity.value;
         const updateToy = { description, price, quantity };
 
-        fetch(`https://server-tan-eight.vercel.app/myToys/${_id}`, {
-
-            method: 'PATCH',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(updateToy)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.insertedId) {
-                    alert('ok')
-                }
-            })
-
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Update it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`https://server-tan-eight.vercel.app/myToys/${_id}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(updateToy)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.insertedId) {
+                        Swal.fire(
+                            'Update!',
+                            'Your Toy has been Update.',
+                            'success'
+                        );
+                    }
+                });
+            }
+        });
+        
     }
 
     return (

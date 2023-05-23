@@ -4,6 +4,7 @@ import { useContext } from 'react';
 
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Helmet } from 'react-helmet';
+import Swal from 'sweetalert2';
 
 const AddToys = () => {
     const {user}=useContext(AuthContext);
@@ -32,18 +33,37 @@ const AddToys = () => {
         );
         const addToys = {name,category,price,description,ratings,picture,sellerEmail,sellerName,quantity};
 
-        fetch(`https://server-tan-eight.vercel.app/addToys`,{
-            method : 'POST',
-            headers:{
-                'content-type':'application/json'
-            },
-            body:JSON.stringify(addToys)
-        })
-        .then(res=>res.json)
-        .then(data=>{
-            console.log(data)
-        })
-        form.reset();
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Add it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`https://server-tan-eight.vercel.app/addToys`,{
+                    method : 'POST',
+                    headers:{
+                        'content-type':'application/json'
+                    },
+                    body:JSON.stringify(addToys)
+                })
+                .then(res=>res.json)
+                .then(data=>{
+                    console.log(data)
+                    Swal.fire(
+                        'ADD!',
+                        'Your Toy has been add.',
+                        'success'
+                    )
+                })
+                form.reset();
+            }})
+
+       
     };
 
     return (
@@ -69,11 +89,11 @@ const AddToys = () => {
                     </div>
                     <div className="grid md:grid-cols-2 md:gap-6">
                         <div className="relative z-0 w-full mb-6 group">
-                            <input type="text" name="sellerName" id="seller_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" defaultValue={user.displayName} placeholder=" " required />
+                            <input type="text" name="sellerName" id="seller_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" defaultValue={user?.displayName} placeholder=" " required />
                             <label htmlFor="floating_first_name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">seller name</label>
                         </div>
                         <div className="relative z-0 w-full mb-6 group">
-                            <input type="email" name="sellerEmail" id="sellerEmail" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" defaultValue={user.email} placeholder=" " required />
+                            <input type="email" name="sellerEmail" id="sellerEmail" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" defaultValue={user?.email} placeholder=" " required />
                             <label htmlFor="sellerEmail" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">seller email</label>
                         </div>
                     </div>
