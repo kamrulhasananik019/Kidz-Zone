@@ -3,6 +3,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import MyToysTable from './MyToysTable';
 import { Helmet } from 'react-helmet';
 import { Dropdown } from 'flowbite-react';
+import Swal from 'sweetalert2';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
@@ -26,22 +27,38 @@ const MyToys = () => {
     }, [sort,user]);
 
     const handleDelete = id => {
-        const proceed = confirm('Are you sure you want to delete');
-        if (proceed) {
-            fetch(`https://server-tan-eight.vercel.app/myToys/${id}`, {
-                method: 'DELETE'
-
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    if (data.deletedCount > 0) {
-                        alert("deleted successful");
-                        const remaining = toys.filter(t => t._id !== id);
-                        setToys(remaining)
-                    }
+        
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result)=>{
+            if(result.isConfirmed){
+                fetch(`https://server-tan-eight.vercel.app/myToys/${id}`, {
+                    method: 'DELETE'
+    
                 })
-        }
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                       
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Toy has been deleted.',
+                                'success'
+                            )
+                            const remaining = toys.filter(t => t._id !== id);
+                            setToys(remaining)
+                        }
+                    })
+            }
+        })
+        
     }
 
 
