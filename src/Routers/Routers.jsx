@@ -37,7 +37,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'addtoys',
-                element:<AddToys></AddToys>
+                element:<PrivateRoute><AddToys></AddToys></PrivateRoute>
             }
             ,
             {
@@ -46,11 +46,11 @@ const router = createBrowserRouter([
             },
             {
                 path:'alltoys',
-                element:<PrivateRoute><AllToys></AllToys></PrivateRoute>
+                element:<AllToys></AllToys>
             },
             {
                 path:"/allToys/:id",
-                element:<AllToysDetails></AllToysDetails>,
+                element:<PrivateRoute><AllToysDetails></AllToysDetails></PrivateRoute>,
                 loader:({params})=> fetch(`https://server-tan-eight.vercel.app/allToys/${params.id}`)
             },
             {
