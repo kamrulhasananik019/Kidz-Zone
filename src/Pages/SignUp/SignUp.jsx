@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 const SignUp = () => {
@@ -33,14 +34,19 @@ const SignUp = () => {
     };
     return (
         <div>
+            <Helmet>
+                <title>
+                    Register
 
+                </title>
+            </Helmet>
             <div className="text-center md:my-14">
-            <h1 className="text-2xl text-[#5145CD] md:text-5xl text-center font-semibold">
+                <h1 className="text-2xl text-[#5145CD] md:text-5xl text-center font-semibold">
                     Join With Fun !
                 </h1>
             </div>
             <div className="container mx-auto grid grid-cols-col md:grid-cols-2">
-            <div className="border-4 md:p-20 rounded-lg border-[#5145CD]">
+                <div className="border-4 md:p-20 rounded-lg border-[#5145CD]">
                     <img src="https://i.ibb.co/jwKds7N/SL-071221-44310-19-removebg-preview.png" alt="" />
                 </div>
                 <div className="container md:w-2/3 border-4 border-[#5145CD] rounded-lg p-3 md:p-10" >
@@ -120,7 +126,7 @@ const SignUp = () => {
                     <div className="py-3">
                         <hr />
                     </div>
-                    <p className=" font-semibold">Already have an account ! <Link  className="text-[#869bee] underline" to="/login">Log In</Link></p>
+                    <p className=" font-semibold">Already have an account ! <Link className="text-[#869bee] underline" to="/login">Log In</Link></p>
                 </div>
             </div>
         </div>

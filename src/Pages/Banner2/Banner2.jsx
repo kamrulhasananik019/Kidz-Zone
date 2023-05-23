@@ -4,7 +4,7 @@
 const Banner2 = () => {
     return (
         <div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div  className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* 1st div */}
                 <div className="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400">
                     <div className="flex">
@@ -15,7 +15,7 @@ const Banner2 = () => {
                                 <button className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none
                             focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">SHOP NOW  </button></div>
                         </div>
-                        <div className="w-96 pt-20">
+                        <div  className="w-96 pt-20">
                             <img className="animate-pulse" src="https://i.ibb.co/0rFP6Hj/model-car-2731662-960-720-removebg-preview.png" alt="" />
                         </div>
                     </div>

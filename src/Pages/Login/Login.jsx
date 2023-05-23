@@ -3,6 +3,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { Button } from "flowbite-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from 'react-icons/fc';
+import { Helmet } from "react-helmet";
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
@@ -42,7 +43,11 @@ const Login = () => {
     return (
 
         <div>
-
+<Helmet>
+    <title>
+     Log In
+    </title>
+</Helmet>
             <div>
                 <h1 className="text-2xl text-[#5145CD] md:text-5xl text-center py-10 font-semibold">
                     Welcome Back !

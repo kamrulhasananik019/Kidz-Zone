@@ -8,6 +8,10 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Error from "../Pages/Error/Error";
 import AddToys from "../Pages/AddToys/AddToys";
 import MyToys from "../Pages/MyToys/MyToys";
+import AllToys from "../Pages/AllToys/AllToys";
+import UpdateToys from "../Pages/MyToys/UpdateToys/UpdateToys";
+import AllToysDetails from "../Pages/AllToysDetails/AllToysDetails";
+
 
 const router = createBrowserRouter([
     {
@@ -38,8 +42,23 @@ const router = createBrowserRouter([
             ,
             {
                 path:'mytoys',
-                element:<MyToys></MyToys>
-            }
+                element:<PrivateRoute><MyToys></MyToys></PrivateRoute>
+            },
+            {
+                path:'alltoys',
+                element:<AllToys></AllToys>
+            },
+            {
+                path:"/allToys/:id",
+                element:<AllToysDetails></AllToysDetails>,
+                loader:({params})=> fetch(`https://server-tan-eight.vercel.app/allToys/${params.id}`)
+            },
+            {
+            path:'myToys/:id',
+            element:<UpdateToys></UpdateToys>,
+            loader:({params})=>fetch(`https://server-tan-eight.vercel.app/myToys/${params.id}`)
+            },
+        
         ]
     },
 ]);

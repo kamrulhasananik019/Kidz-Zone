@@ -8,7 +8,7 @@ const TabViwe = () => {
 
 
     useEffect(() => {
-        fetch(`https://server-tan-eight.vercel.app/categories?category=Sedans`, {
+        fetch(`https://server-tan-eight.vercel.app/categories?category=Sedans`,{
             method: 'GET',
             headers: {
                 'content-type': 'application/json'

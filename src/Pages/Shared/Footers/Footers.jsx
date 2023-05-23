@@ -10,18 +10,20 @@ const Footers = () => {
                         <img src="https://i.ibb.co/jwKds7N/SL-071221-44310-19-removebg-preview.png" className="w-40 mr-3" alt="Flowbite Logo" />
                         <span className="self-center text-4xl font-semibold whitespace-nowrap "> <span className='text-[#5145CD]'>KIDS</span> <span className=' bg-clip-text text-transparent bg-gradient-to-tr from-red-600 via-violet-500 to-sky-600'>Zone</span></span>
                     </a>
-                    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <ul className="text-center flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li>
                             <a href="#" className="mr-4 hover:underline md:mr-6 ">About</a>
                         </li>
                         <li>
-                            <a href="#" className="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                            <a href="#" className="mr-4 hover:underline md:mr-6">Privacy Policy <br />  www.kidszone.net</a>
                         </li>
                         <li>
-                            <a href="#" className="mr-4 hover:underline md:mr-6 ">Licensing</a>
+                            <a href="#" className="mr-4 hover:underline md:mr-6 ">Address <br /> NewMarket,SherPur,BD</a>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline">Contact</a>
+                            <a href="#" className="hover:underline">Contact
+                            <br /> +05456465556
+                            </a> 
                         </li>
                     </ul>
                 </div>
