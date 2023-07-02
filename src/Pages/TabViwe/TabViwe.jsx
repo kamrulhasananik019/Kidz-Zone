@@ -8,7 +8,7 @@ const TabViwe = () => {
 
 
     useEffect(() => {
-        fetch(`https://server-tan-eight.vercel.app/categories?category=Sedans`,{
+        fetch(`https://ass11-server-two.vercel.app/categories?category=Sedans`,{
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
@@ -23,7 +23,7 @@ const TabViwe = () => {
     const handleCategory = (event) => {
         const category = event.target.innerText;
 
-        fetch(`https://server-tan-eight.vercel.app/categories?category=${category}`, {
+        fetch(`https://ass11-server-two.vercel.app/categories?category=${category}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'

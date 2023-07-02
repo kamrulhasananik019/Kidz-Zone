@@ -10,7 +10,7 @@ const AllToys = () => {
 
 
     useEffect(() => {
-        fetch(`https://server-tan-eight.vercel.app/allToys`, {
+        fetch(`https://ass11-server-two.vercel.app/allToys`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

@@ -44,7 +44,7 @@ const AddToys = () => {
             confirmButtonText: 'Yes, Add it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://server-tan-eight.vercel.app/addToys`,{
+                fetch(`https://ass11-server-two.vercel.app/addToys`,{
                     method : 'POST',
                     headers:{
                         'content-type':'application/json'

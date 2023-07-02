@@ -51,12 +51,12 @@ const router = createBrowserRouter([
             {
                 path:"/allToys/:id",
                 element:<PrivateRoute><AllToysDetails></AllToysDetails></PrivateRoute>,
-                loader:({params})=> fetch(`https://server-tan-eight.vercel.app/allToys/${params.id}`)
+                loader:({params})=> fetch(`https://ass11-server-two.vercel.app/allToys/${params.id}`)
             },
             {
             path:'myToys/:id',
             element:<UpdateToys></UpdateToys>,
-            loader:({params})=>fetch(`https://server-tan-eight.vercel.app/myToys/${params.id}`)
+            loader:({params})=>fetch(`https://ass11-server-two.vercel.app/myToys/${params.id}`)
             },
         
         ]

@@ -11,7 +11,7 @@ const MyToys = () => {
     const [sort, setSort] = useState(1);
 
     useEffect(() => {
-        fetch(`https://server-tan-eight.vercel.app/myToys?sellerEmail=${user?.email}&sort=${sort}`, {
+        fetch(`https://ass11-server-two.vercel.app/myToys?sellerEmail=${user?.email}&sort=${sort}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
@@ -38,7 +38,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result)=>{
             if(result.isConfirmed){
-                fetch(`https://server-tan-eight.vercel.app/myToys/${id}`, {
+                fetch(`https://ass11-server-two.vercel.app/myToys/${id}`, {
                     method: 'DELETE'
     
                 })

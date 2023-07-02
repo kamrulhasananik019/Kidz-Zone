@@ -26,7 +26,7 @@ const UpdateToys = () => {
             confirmButtonText: 'Yes, Update it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://server-tan-eight.vercel.app/myToys/${_id}`, {
+                fetch(`https://ass11-server-two.vercel.app/myToys/${_id}`, {
                     method: 'PATCH',
                     headers: {
                         'content-type': 'application/json'

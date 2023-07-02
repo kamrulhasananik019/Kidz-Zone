@@ -2,8 +2,8 @@
 b7a11-toy-marketplace-client-side-Anik407 created by GitHub Classroom
 
 * <h4> LIVE LINK : https://assignment-11-f8b18.web.app </h4>
-* <h4> vercel LINK : https://server-tan-eight.vercel.app </h4>
-* <h5> Server site LINK : https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-server-side-Anik407  </h5>
+* <h4> vercel LINK : https://ass11-server-two.vercel.app</h4>
+* <h5> Server site LINK : https://github.com/Anik407/Kidz-zone-server </h5>
 
 
 
