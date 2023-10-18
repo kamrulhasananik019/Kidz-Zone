@@ -8,7 +8,7 @@
 
 
 
-<h3>   <span className='text-[#5145CD]'>KIDS</span> <span className=' bg-clip-text text-transparent bg-gradient-to-tr from-red-600 via-violet-500 to-sky-600'>Zone</span></h3>
+<h3><span className='text-[#5145CD]'>KIDS</span> <span className=' bg-clip-text text-transparent bg-gradient-to-tr from-red-600 via-violet-500 to-sky-600'>Zone</span></h3>
 
 <img src="https://i.ibb.co/jwKds7N/SL-071221-44310-19-removebg-preview.png" />
 
