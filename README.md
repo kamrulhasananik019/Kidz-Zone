@@ -14,7 +14,7 @@
 
    <span className='text-[#5145CD]'>KIDS</span> <span className=' bg-clip-text text-transparent bg-gradient-to-tr from-red-600 via-violet-500 to-sky-600'>Zone</span> is an online e-commerce platform that offers a thrilling collection of toy cars and accessories for car enthusiasts of all ages. From die-cast collectibles to remote-controlled cars and customizable track sets, Carvaganza provides an immersive experience into the world of toy cars.
 
-<h5>Features</h5>
+<h4>Features</h4>
 
 * Extensive Collection: Carvaganza offers a wide range of toy cars, including die-cast collectibles, remote-controlled cars, 
   construction kits, and licensed merchandise.
